@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SubHeader from './SubHeader'
 
 // import DataGridDemo from './Grid'
 
@@ -10,6 +11,7 @@ export default function App() {
       <Header>
         <TextHeader><h1>Rishika's Calculator ❤</h1></TextHeader>
       </Header>
+      <SubHeader/>
       <Viewport>
         {/* <DataGridDemo/> */}
       </Viewport>
@@ -28,9 +30,10 @@ const Viewport = styled.div`
 const Header = styled.div`
   background-color: #d12e61;
   width: 100%;
-  height: 10vh;
+  height: 80px;
   display: flex;
   flex-direction: row;
+  
 `
 
 const TextHeader = styled.div`
@@ -41,6 +44,8 @@ const TextHeader = styled.div`
   font-weight: 400;
   font-size: 15px;
   line-height: 1.8em;
+  align-items: center;
+
 
   h1 {
     padding: 0;
