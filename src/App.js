@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import BasicTable from './Table';
-import DataGridDemo from './Grid'
+
+// import DataGridDemo from './Grid'
 
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
         <TextHeader><h1>Rishika's Calculator ❤</h1></TextHeader>
       </Header>
       <Viewport>
-        <DataGridDemo/>
+        {/* <DataGridDemo/> */}
       </Viewport>
       
     </React.Fragment>
