@@ -1,15 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import SubHeader from './SubHeader'
+import SubHeader from './SubHeader';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
 // import DataGridDemo from './Grid'
 
 
-export default function App() {
+function App() {
   return (
     <React.Fragment>
       <Header>
         <TextHeader><h1>Rishika's Calculator ❤</h1></TextHeader>
+        <SignOut>
+          <AmplifySignOut />
+        </SignOut>
       </Header>
       <SubHeader/>
       <Viewport>
@@ -20,6 +24,7 @@ export default function App() {
     );
 }
 
+export default withAuthenticator(App);
 
 const Viewport = styled.div`
   display: flex;
@@ -33,7 +38,14 @@ const Header = styled.div`
   height: 80px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   
+`
+
+const SignOut = styled.div`
+  margin-left: 70%;
+  margin-right: 10px;
+
 `
 
 const TextHeader = styled.div`
